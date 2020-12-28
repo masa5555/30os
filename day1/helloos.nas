@@ -34,13 +34,14 @@
 ; メッセージ部分
 
 		DB		0x0a, 0x0a		; \n\n
-		DB		"hello, world"
+		DB		"hello, OS world"
 		DB		0x0a			; \n
 		DB		0
 
-		; 0x001fe までを 0x00 で埋める
+		; 0x001fe までを 0x00 で埋める (一つ前のメッセージ部分)
 		;RESB	0x1fe-$			; os自作入門特有
 		RESB 0x1fe-($-$$)		; 上の行をnasm用に変更
+		; $ = 式を含む行の先頭のアセンブリ位置 $$ = 現在のセクションの先頭
 
 		DB		0x55, 0xaa
 
