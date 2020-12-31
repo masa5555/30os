@@ -3,7 +3,7 @@
 ### コンパイル
 ```
 cd 30os
-nasm day?/?.nas -o helloos.img
+nasm helloos.nas -o helloos.img
 ```
 
 ### day1
